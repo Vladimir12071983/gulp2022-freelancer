@@ -1,9 +1,9 @@
 @use "sass:math";
 
-@import "mixins";
-@import "base";
-@import "null";
-@import "fonts";
+@import "general/mixins";
+@import "general/base";
+@import "general/null";
+@import "general/fonts";
 
 
 
@@ -16,3 +16,15 @@ body {
 		color: red;
 	}
 }
+
+
+
+// Подключение стилей общих элементов проекта
+// @import "common";
+
+// Подключение стилей отдельных блоков
+@import "header";
+@import "footer";
+
+// Подключение стилей отдельных страниц
+@import "index";
