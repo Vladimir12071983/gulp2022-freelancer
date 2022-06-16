@@ -1,32 +1,3 @@
-// Шрифт по умолчанию
-$fontFamily: "";
-$fontSize: rem(14); // где 14(px) - размер шрифта по умолчанию из макета
-
-// Основные цвета
-$mainColor: #000; // Цвет шрифта по умолчанию
-
-
-// Минимальная ширина страницы
-$minWidth: 320;
-// Ширина полотна (макета)
-$maxWidth: 1920;
-// Ширина ограничивающего контейнера (0 = нет ограничения)
-$maxWidthContainer: 1170;
-// Общий отступ у контейнера
-// (30 = по 15px слева и справа, 0 = нет отступа)
-$containerPadding: 30;
-
-
-// Ширина страбатывания первого брейкпоинта
-$containerWidth: $maxWidthContainer + $containerPadding;
-
-// Брейк-поинты
-$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
-$tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
-$mobile: em(767.98); // Телефоны L
-$mobileSmall: em(479.98); // Телефоны S
-
-
 // REM
 @function rem($px) {
 	$result: math.div($px, 16)+rem;
@@ -38,25 +9,6 @@ $mobileSmall: em(479.98); // Телефоны S
 	$result: math.div($px, $current)+em;
 	@return $result;
 }
-
-
-// (i) Стили будут применяться ко 
-// всем классам содержащим *__container
-// Например header__container, main__container и т.д.
-
-[class*="__container"] {
-	@if ($maxWidthContainer>0) {
-		max-width: rem($maxWidthContainer);
-		box-sizing: content-box;
-		margin: 0 auto;
-	}
-
-	@if ($containerPadding>0) {
-		padding: 0 rem(math.div($containerPadding, 2));
-	}
-}
-
-
 
 
 
