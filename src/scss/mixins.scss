@@ -27,6 +27,17 @@ $mobile: em(767.98); // Телефоны L
 $mobileSmall: em(479.98); // Телефоны S
 
 
+// REM
+@function rem($px) {
+	$result: math.div($px, 16)+rem;
+	@return $result;
+}
+
+//EM
+@function em($px, $current: 16) {
+	$result: math.div($px, $current)+em;
+	@return $result;
+}
 
 
 // (i) Стили будут применяться ко 
@@ -46,17 +57,7 @@ $mobileSmall: em(479.98); // Телефоны S
 }
 
 
-// REM
-@function rem($px) {
-	$result: math.div($px, 16)+rem;
-	@return $result;
-}
 
-//EM
-@function em($px, $current: 16) {
-	$result: math.div($px, $current)+em;
-	@return $result;
-}
 
 
 //Адаптивное свойство
